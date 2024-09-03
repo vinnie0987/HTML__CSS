@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            min-height:100vh;
+            margin:0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color:rgba(173,216,230,0.8);
+        }
+     .container{
+        width: 200px;
+        height: 300px;
+        background-color: rgba(221, 231, 234, 0.7);
+        padding: 20px;
+        
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    .icons1{
+       
+        width:100%;
+       
+        
+    }
+
+    .icons2{
+        
+        
+        display: flex;
+        gap: 10px;
+        width:10px;
+        height: 30px;
+        justify-content: center;
+        
+        
+        
+    }
+
+    .text-container{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .name{
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .titles{
+        font-size: 14px;
+        color: gray;
+    }
+
+    .dot{
+        margin: 0 5px;
+        
+        top:50%;
+        bottom:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        font-size: 2em;
+    }
+
+    button{
+            border-radius: 25px;
+            background-color: #fff;
+            border: none;
+            padding: 5px 15px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="icons1">
+            <img src="./icons8-google-48.png" alt="">
+        </div>
+        
+        <div class="text-container">
+            <p class="name">Ranesh Suthar</p>
+            <p class="titles">Designer <span class="dot">.</span>Engineer</p>
+        </div>
+        <div class="icons2">
+            <img src="./icons8-facebook-30.png" alt="">
+            <img src="./icons8-twitter-30.png" alt="">
+            <img src="./icons8-instagram-48.png" alt="">
+        </div>
+
+        <button class="button">
+       <p>Add me to search</p>
+        </button>
+   
+   
+    </div>
+</body>
+</html>
