@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0;
+            font-family:Arial,sans-serif;
+        }
+
+        
+
+        .header{
+            display: flex;
+            align-items: center;
+            background-color: blanchedalmond;
+            padding: 10px;
+        }
+
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color: rgb(241, 241, 235);
+            padding: 10px;
+
+        }
+
+        .nav1{
+            width: 50%;
+            padding-left: 32px;
+        }
+
+        .left-nav{
+            display: flex;
+            justify-content: right;
+            
+            
+        }
+
+        
+        .left-nav, .right-nav{
+            display: flex;
+        }
+
+        .left-nav ul, .right-nav ul{
+            display: flex;
+            list-style:none;
+            margin:0;
+            padding:0;
+        }
+
+        .left-nav ul li, .right-nav ul li{
+            margin:0 10px;
+        }
+
+        .left-nav ul li, .right-nav ul li a{
+            color: rgb(133, 128, 128);
+            text-decoration: none;
+            padding: 14px 20px;
+            display:block;
+        }
+
+        .profile{
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+        }
+
+        .profile-pic{
+            width: 40px;
+            height: 40px;
+            border-radius:50%;
+            margin-right: 10px;
+        }
+        
+
+        nav ul{
+            list-style-type: none;
+            margin:0;
+            padding:0;
+            display:flex;
+        }
+
+        nav ul li{
+            margin:0 15px;
+        }
+
+        nav ul li a{
+            color: rgb(132, 123, 123);
+            text-decoration: none;
+            padding: 14px 20px;
+            display:block;
+
+        }
+
+        .nav ul li a:hover{
+            background-color: #575757;
+        }
+
+        .container0{
+            min-height:100vh;
+            margin:0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-color:whitesmoke;
+            gap: 40px;
+        }
+
+        .container1{
+        width: 600px;
+        height: 500px;
+        background-color: rgba(221, 231, 234, 0.7);
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        gap: 30px;
+
+        }
+
+        .container2{
+            width: 400px;
+        height: 500px;
+        background-color: rgba(221, 231, 234, 0.7);
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        align-items:start;
+        justify-content: flex-start;
+        text-align: center;
+
+        }
+
+        .text-container1{
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            margin-top: 10px;
+            
+        }
+        .text-container2{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 10px;
+            
+        }
+
+        .text-container3{
+            margin-top: 20px;
+            display: flex;
+            flex-direction: block;
+            margin-right: 10px;
+            color: white;
+            justify-content: flex-end;
+            align-items: center;
+            
+            
+
+        }
+
+        button{
+            border-radius: 5px;
+            background-color:rgba(185, 200, 203, 0.8);
+            border: none;
+            /* padding: 20px 90px; */
+            padding: 20px 90px 20px 10px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            
+            justify-content: flex-start;
+            align-items: start;
+            display: flex;
+            
+        }
+
+        .btn1{
+            margin-left: 10px;
+            padding: 10px 30px 10px 10px;
+            color: white; 
+            background-color: blue;"
+            border-radius: 15px;
+        }
+        
+        .btn2{
+            padding: 5px 10px 5px 10px;
+
+        }
+
+        .login{
+           
+            display: flex;
+            gap:32px;
+            justify-content: flex-end;
+        }
+
+        .shipping{
+            margin-top: 80px;
+            display: flex;
+            gap:5px;
+            justify-content: flex-end;
+        }
+
+        .blue-text{
+            color: blue;
+        }
+
+        .separator{
+            margin: 0 10px;
+        }
+
+        .sony{
+            margin-top: 20px;
+            display: flex;
+            flex-direction: block;
+            margin-right: 10px;
+            color: white;
+            justify-content: flex-end;
+            align-items: center;
+
+        }
+
+        .subtotal1{
+
+            margin-top: 20px;
+            display: flex;
+            flex-direction: block;
+            margin-right: 10px;
+            color: rgb(16, 15, 15);
+            justify-content: flex-end;
+            align-items: center;
+            gap:30px;
+
+
+        }
+        .subtotal2{
+            margin-top: 0px;
+            display: flex;
+            flex-direction: column;
+            margin-right: 10px;
+            color: rgb(16, 15, 15);
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+            font-size: 12px;
+            color: #978e8e;
+            font-weight: 400;
+
+        }
+
+        .btn3{
+            border: 2px solid rgb(105, 105, 230);
+            background-color:white;
+            padding: 15px 30px 15px 10px;
+            color: blue;
+        }
+
+        .sub{
+            
+            display: flex;
+            /* flex-direction: column; */
+            margin-right: 10px;
+            color: rgb(12, 11, 11);
+            justify-content: space-between;
+            align-items:center;
+            width: 100%;
+
+        }
+
+        .separation2{
+            margin: 0 40px;
+        }
+
+        img{
+
+            width: 250px;
+            height:100px;
+
+        }
+
+        .img1{
+            width:10px;
+            height:auto;
+            position: absolute;
+            right: 1px;
+        }
+
+        .img2{
+            width:10px;
+            height:auto;
+            
+            right: 1px;
+        }
+
+        .btn4{
+
+            position: relative;
+
+        }
+
+        .icon{
+            width:30px;
+            height:auto;
+            
+            right: 1px;
+        }
+        
+
+        
+
+        
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <nav class="nav1">
+            <span class="icon">&#x1F6CD</span>
+          <ul class="left-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Help</a></li></ul>
+            </nav>
+            <div class="spacer"></div> <div class="right-nav">
+                <ul>
+            <li><a href="#">Account<span>&#x25BC</span>
+            </a></li>
+          </ul>
+            
+        <ul><li> <a href="#"> <span>&#x1F45C</span>3 Items</a>
+        </li></ul>
+        <div class="profile">
+          <img
+            src="./WhatsApp Image 2024-05-21 at 17.24.04_f77d9a67.jpg"
+            alt="profile picture"
+            class="profile-pic"/>
+
+          
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container0">
+
+    <div class="container1"> 
+        <nav>
+        <p class="text-container1"> <span class="blue-text">Account</span> <span class="separator">&#x2013</span><span class="separator"><img src="./circle-check-solid.svg" alt="" class="img2"></span><span class="separator">&#x2013</span> Shipping <span class="separator">&#x2013</span> <span><img src="./circle-check-solid.svg" alt="" class="img2"</span> <span class="separator">&#x2013</span> Payment</p>
+    </nav>
+    <div class="textcontainer2">
+        <p> <strong>Account details</strong></p>
+        <p style="color:gray;">Email address</p>
+        <button class="btn4">Email@myemail.com <span> <img src="./circle-check-solid.svg" alt="" class="img1"></span></button>
+        <p style="color:gray;">Password </p>
+        <button class="btn4">************************** <span> <img src="./circle-check-solid.svg" alt="" class="img1"></span> </button>
+    </div>
+        <div class="textcontainer3">
+      <div class="login">
+        <p style="color:gray; font-size: 12px;">Register for an account</p>
+        <button class="btn1">Login</button>
+    </div>
+    <div class="shipping">
+        <p style="color:gray; font-size: 12px;">Cancel order</p>
+        <button class="btn1">Shipping details</button>
+    </div>
+</div>
+    </div>
+
+
+    <div class="container2">
+        <div>
+        <p style="text-align: start;"> <strong>Order Summary</strong></p>
+        <img src="./download.jpeg" alt="" class="img"/>
+    </div>
+        <div class="sony">
+            <p style="color:black;font-size: 12px; font-weight:500;">Sony wireless headphones</p>
+            <button class="btn2">-</button><p style="font-weight: bold; color: black;">1</p><button class="btn2">+</button>
+           
+        </div>
+        <p style="font-weight: bolder;margin-top: 0px;"><span>&#x00A3</span>320.45</p>
+        <p style="color:gray;font-size: 10px;">Gift Card/Discount code</p>
+        <div class="subtotal1">
+        <button></button> <button class="btn3">Apply</button>
+        </div>
+        <div class="subtotal2">
+            <div class="sub">
+            <p>Sub total <span class="separation2"> </span> </p> <p><span>&#x00A3</span>316.55</p>
+        </div>
+        <div class="sub">
+            <p>Tax <span class="separation2"></span></p> <p><span>&#x00A3</span>3.45</p>
+        </div>
+        <div class="sub">
+            <p>Shipping <span class="separation2"></span> </p> <p><span style="color:blue;">Free</span> </p>
+        </div>
+        <div class="sub">
+            <p><strong>Total</strong> <span class="separation2"> </span> </p> <p><span>&#x00A3</span>320.45</p>
+        </div>
+    </div>
+    </div>
+    
+
+        </div>
+    
+  </body>
+</html>
